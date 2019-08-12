@@ -15,8 +15,8 @@ Things you may want to cover:
 ## groups_users_table
 |Column|Type|Options|
 |------|----|-------|
-|use|reference|null: false, foreign_key: true|
-|group|reference|null: false, foreign_key: true|
+|use|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ## Association
 belongs_to :group
@@ -49,8 +49,8 @@ has_many :messages
 ## messages_table
 |Column|Type|Options|
 |------|----|-------|
-|group|reference|null: false, foreign_key: true|
-|user|reference|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
 |text|text||
 |image|text||
 |created_at|date|null: false|
