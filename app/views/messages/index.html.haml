@@ -8,7 +8,7 @@
       %h2.main-header__left-box__current-group
         test
       %ul.main-header__left-box__member-list
-        Member :&nbsp;
+        Member
         %li.main-header__left-box__member
           Daiki
     .main-header__edit-btn
@@ -23,7 +23,7 @@
       %p.message__text
         first text message
   .form
-    %form.new-message{action: '/', method: 'post'}
+    %form.new-message{action: '/index', method: 'post'}
       .input-box
         %input.input-box__text{name: "message[text]", placeholder: "type a message", type: "text"}
         %label.input-box__image{for: "message_image"}
