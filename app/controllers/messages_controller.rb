@@ -15,6 +15,7 @@ before_action :set_group
       @messages = @group.messages.includes(:user)
       flash.now[alert] = 'メッセージを入力してください'
       render :index
+    end
   end
 
   private
