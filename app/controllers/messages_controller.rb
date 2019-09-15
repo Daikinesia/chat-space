@@ -13,14 +13,14 @@ before_action :set_group
       redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
     else
       @messages = @group.messages.includes(:user)
-      flash.now[alert] = 'メッセージを入力してください'
+      flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
   end
 
   private
   def message_params
-    pramas.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+    params.require(:message).permit(:text, :image).merge(user_id: current_user.id)
     # mergeしているのは、フォームでparamsに送付されてくるidではないが、Create時に必要なIDなので、mergeでくっつけている。
   end
 
