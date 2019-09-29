@@ -128,43 +128,46 @@
       margin-bottom: 10px;
     }
   }
-  .form{
-    height: 90px;
-    padding: 20px 40px;
-    background-color: #ddd;
-    box-sizing: border-box;
-    .new-message{
-      display: flex;
-      .input-box{
+}
+
+.form{
+  height: 90px;
+  padding: 20px 40px;
+  background-color: #ddd;
+  box-sizing: border-box;
+  .new-message{
+    display: flex;
+    .form__mask{
+      width: 100%;
+      position: relative;
+      .form__message{
+        height: 50px;
         width: 100%;
-        position: relative;
-        &__text{
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          box-sizing: border-box;
-          background-color: $white;
+        padding: 0 0 0 10px;
+        color: #434a54;
+        border-style: none;
+      }
+      .form__mask__image{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.3rem;
+        .icon{
+
         }
-        &__image{
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          font-size: 1.3rem;
-        }
-        &__image__file{
+        .hidden{
           display: none;
         }
       }
-      .submit-btn{
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: $light_blue;
-        color: $white;
-        box-sizing: border-box;
-      }
     }
-  } 
+    .form__submit{
+      width: 100px;
+      height: 50px;
+      padding: 0px 30px;
+      margin-left: 25px;
+      background-color: $light_blue;
+      color: $white;
+      box-sizing: border-box;
+    }
+  }
 }
