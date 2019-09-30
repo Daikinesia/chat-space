@@ -14,14 +14,17 @@
     .main-header__edit-btn
       Edit
   .messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker
-          Daiki
-        %p.message__upper-info__date
-          2019/08/04(Sun) 22:14:35
-      %p.message__text
-        first text message
+    = render @messages
+    -# = render partial: 'message', collection: @messages
+
+    -# .message
+    -#   .message__upper-info
+    -#     %p.message__upper-info__talker
+    -#       = message.user.id
+    -#     %p.message__upper-info__date
+    -#       = @messages.created_at
+    -#   %p.message__text
+    -#     = @messages.text
 
   .form
     = form_for [@group, @message], html:{class:'new-message'} do |f|
