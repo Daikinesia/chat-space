@@ -15,17 +15,7 @@
       Edit
   .messages
     = render @messages
-    -# = render partial: 'message', collection: @messages
-
-    -# .message
-    -#   .message__upper-info
-    -#     %p.message__upper-info__talker
-    -#       = message.user.id
-    -#     %p.message__upper-info__date
-    -#       = @messages.created_at
-    -#   %p.message__text
-    -#     = @messages.text
-
+    
   .form
     = form_for [@group, @message], html:{class:'new-message'} do |f|
       .form__mask
@@ -35,6 +25,7 @@
           = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'form__submit'      
 
+  -# フォームタグで折角作ったので、一応残しておく。
   -# .form
   -#   %form.new-message{action: '/', method: 'post'}
   -#     .input-box
