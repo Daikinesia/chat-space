@@ -27,7 +27,6 @@ $(function(){
     $('.form__submit').removeAttr('data-disable-with');
     var formData = new FormData(this);
     var url = location.href
-    console.log(url)
     $.ajax({
       url: url,
       type: "POST",
