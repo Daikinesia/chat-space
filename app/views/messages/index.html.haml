@@ -14,15 +14,8 @@
     .main-header__edit-btn
       Edit
   .messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker
-          Daiki
-        %p.message__upper-info__date
-          2019/08/04(Sun) 22:14:35
-      %p.message__text
-        first text message
-
+    = render @messages
+    
   .form
     = form_for [@group, @message], html:{class:'new-message'} do |f|
       .form__mask
@@ -32,6 +25,7 @@
           = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'form__submit'      
 
+  -# フォームタグで折角作ったので、一応残しておく。
   -# .form
   -#   %form.new-message{action: '/', method: 'post'}
   -#     .input-box

@@ -105,6 +105,7 @@
     padding: 46px 40px;
     background-color: #fafafa;
     box-sizing: border-box;
+    overflow: scroll;
   }
   .message{
     padding-bottom: 40px;
@@ -126,6 +127,10 @@
       color: #434e54;
       font-size: 14px;
       margin-bottom: 10px;
+    }
+    &__image{
+      width: 200px;
+      height: auto;
     }
   }
 }
