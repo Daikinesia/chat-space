@@ -19,8 +19,6 @@ $(function(){
                 </p>`
     return html;
   }
-
- 
     
   $('.new-message').on('submit',function(e){
     e.preventDefault();
