@@ -6,13 +6,13 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group
-        test
+        = @group.name
       %ul.main-header__left-box__member-list
         Member :&nbsp;
         %li.main-header__left-box__member
-          Daiki
-    .main-header__edit-btn
-      Edit
+          - @group.group_users.each do |group_user| 
+            = group_user.user.name
+    = link_to "edit", edit_group_path(@group.id), class: 'main-header__edit-btn'
   .messages
     = render @messages
     

@@ -15,7 +15,7 @@
     .group
       - current_user.groups.each do |group|
         = link_to group_messages_path(group) do
-          .group__name
+          %P.group__name
             = group.name
-          .group__message
+          %p.group__message
             no messages
