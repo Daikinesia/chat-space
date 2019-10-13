@@ -10,7 +10,6 @@ $(function(){
   
   $('#user-search-field').on('keyup', function(){
     var keyword = $(this).val();
-    // console.log(keyword)
     $.ajax({
       url: '/users',
       type: "GET",
@@ -19,7 +18,6 @@ $(function(){
     })
 
     .done(function(data){
-      // console.log(data)
       $("#user-search-result").empty();
       if (data.length !== 0) {
         data.forEach(function(data){
