@@ -29,8 +29,6 @@ $(function(){
         data: {id: last_message_id}
         })
       .done(function(messages){
-        console.log('aa')
-        console.log(messages)
         if (messages.length !== 0){
           // var insertHTML = '';
           messages.forEach(function (message) {
