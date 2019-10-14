@@ -7,5 +7,5 @@
   %p.message__lower
     - if message.text.present?
       %p.message__text{data: {id: message.id}}
-      = message.text
-    = image_tag message.image.url, class: 'message__image' if message.image.present?
+        = message.text
+      = image_tag message.image.url, class: 'message__image' if message.image.present?

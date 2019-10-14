@@ -20,7 +20,7 @@ $(function(){
   }
 
   var reloadMessages = function(){
-    if (window.location.href.match( "/groups/")){
+    if (window.location.href.match("/groups/")){
       var last_message_id = $('.message__text:last').data('id')
         $.ajax({
         url: 'api/messages',
