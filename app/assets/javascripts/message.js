@@ -38,7 +38,6 @@ $(function(){
       $('img').error(function() {
         $(this).remove();
       });
-      console.log(data)
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'slow')
     })
     .fail(function(){
