@@ -16,7 +16,6 @@ $(function(){
                     <img src= ${message.image} class= 'message__image'>
                   </p>
                 </p>`
-    // return html;
     $('.messages').append(html);
   }
 
