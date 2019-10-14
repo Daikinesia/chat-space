@@ -30,8 +30,10 @@ $(function(){
         })
       .done(function(messages){
         if (messages.length !== 0){
+          // カリキュラムコードに記載があったので備忘録
           // var insertHTML = '';
           messages.forEach(function (message) {
+            // カリキュラムコードに記載があったので備忘録
             // insertHTML = buildMessageHTML(message);
             buildMessageHTML(message);
             $('img').error(function() {
