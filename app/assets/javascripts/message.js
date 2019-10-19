@@ -10,7 +10,7 @@ $(function(){
                     </p>
                   </div>
                   <p class= 'message__lower'>
-                    <p class= 'message__text'>
+                    <p class= 'message__text' data-id="${message.id}">
                     ${message.text}
                     </p>
                     <img src= ${message.image} class= 'message__image'>
@@ -38,7 +38,7 @@ $(function(){
       $('img').error(function() {
         $(this).remove();
       });
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'slow')
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast')
     })
     .fail(function(){
       alert('入力されていません。')
