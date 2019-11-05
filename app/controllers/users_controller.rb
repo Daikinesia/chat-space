@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
-    @users = User.where.not(current_user).where('name LIKE(?)', "%#{params[:name]}%")
+    return nil if params[:name] == ""
+    @users = User.where.not(id: current_user.id).where('name LIKE(?)', "%#{params[:name]}%")
     respond_to do |format|
       format.html {redirect_to group_path(@group)}
       format.json
@@ -12,7 +13,7 @@ class UsersController < ApplicationController
 
   def update
     if current_user.update(user_params)
-      redrect_to root_path
+      redirect_to root_path
     else
       render :edit
       # editのviewを表示
