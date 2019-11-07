@@ -31,10 +31,17 @@ $(function() {
   }
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
+    let registerdUsers = []
+    $(".chat-group-user").each(function(){
+      let value = $(this).children().val()
+      registerdUsers.push(value)
+    })
+
+    var data = {keyword: input, except: registerdUsers}
     $.ajax({
       type: "GET",
       url: "/users",
-      data: { keyword: input },
+      data: data,
       dataType: "json"
     })
       .done(function(users) {

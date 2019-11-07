@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
     return nil if params[:name] == ""
-    @users = User.where.not(id: current_user.id).where('name LIKE(?)', "%#{params[:name]}%")
+    @users = User.where.not(id: current_user.id,id: params[:except]).where('name LIKE(?)', "%#{params[:name]}%")
     respond_to do |format|
       format.html {redirect_to group_path(@group)}
       format.json
@@ -22,6 +22,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:name, :email, :except)
   end
 end
